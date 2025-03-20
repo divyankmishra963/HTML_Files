@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <template id="MyFirstid">
+        <div>
+            <h1>Hello there!</h1>
+            <p>Welcome,buddy</p>
+        </div>
+    </template>
+    <script>
+        var x=document.getElementById('MyFirstid')
+        var y=document.importNode(x.content,true)
+        y.querySelector('h1').textContent="Let's do this."
+        var z = document.importNode(x.content,true)
+        z.querySelector('h1').textContent="Is this all right?"
+        document.body.appendChild(y)
+        document.body.appendChild(z)
+    </script>
+</body>
+</html>
